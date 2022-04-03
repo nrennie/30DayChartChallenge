@@ -15,3 +15,8 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <p align="center">
 <img src="viz/day_02.jpg?raw=true" width="50%">
 </p>
+
+## Day 3 (Historical)
+<p align="center">
+<img src="viz/day_03.jpg?raw=true" width="50%">
+</p>
