@@ -21,7 +21,8 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <img src="viz/day_03.jpg?raw=true" width="50%">
 </p>
 
-## Day 4 (Flora) in Tableau
+## Day 4 (Flora) in Tableau (left) and R (right)
 <p align="center">
-<img src="viz/day_04.png?raw=true" width="50%">
-</p>
+<img src="viz/day_04.png?raw=true" width="48%">
+<img src="viz/day_04_R.png?raw=true" width="48%">
+</p> 
