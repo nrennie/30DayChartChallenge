@@ -6,17 +6,22 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <img src="prompts.jpg?raw=true" width="60%">
 </p>
 
-## Day 1 (Part to whole)
+## Day 1 (Part to whole) in R
 <p align="center">
 <img src="viz/day_01.jpg?raw=true" width="50%">
 </p>
 
-## Day 2 (Pictogram)
+## Day 2 (Pictogram) in R
 <p align="center">
 <img src="viz/day_02.jpg?raw=true" width="50%">
 </p>
 
-## Day 3 (Historical)
+## Day 3 (Historical) in R
 <p align="center">
 <img src="viz/day_03.jpg?raw=true" width="50%">
+</p>
+
+## Day 4 (Flora) in Tableau
+<p align="center">
+<img src="viz/day_04.png?raw=true" width="50%">
 </p>
