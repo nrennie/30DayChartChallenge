@@ -26,3 +26,8 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <img src="viz/day_04.png?raw=true" width="48%">
 <img src="viz/day_04_R.png?raw=true" width="48%">
 </p> 
+
+## Day 5 (Slope) in R
+<p align="center">
+<img src="viz/day_05.png?raw=true" width="50%">
+</p>
