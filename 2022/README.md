@@ -31,3 +31,8 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <p align="center">
 <img src="viz/day_05.png?raw=true" width="50%">
 </p>
+
+## Day 6 (Our World in Data) in R
+<p align="center">
+<img src="viz/day_06.jpg?raw=true" width="50%">
+</p>
