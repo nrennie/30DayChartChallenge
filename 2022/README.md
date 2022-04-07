@@ -41,3 +41,8 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <p align="center">
 <img src="viz/day_07.jpg?raw=true" width="50%">
 </p>
+
+## Day 8 (Mountains) in Figma
+<p align="center">
+<img src="viz/day_08.png?raw=true" width="50%">
+</p>
