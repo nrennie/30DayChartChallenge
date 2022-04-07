@@ -36,3 +36,8 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <p align="center">
 <img src="viz/day_06.jpg?raw=true" width="50%">
 </p>
+
+## Day 7 (Physical) in R
+<p align="center">
+<img src="viz/day_07.jpg?raw=true" width="50%">
+</p>
