@@ -56,15 +56,26 @@ p2 <- ggplot(data = df,
 p2
 
 # subtitle
-st <- str_wrap_break("Although the percentage of UK households experiencing fuel poverty decreased between 2010 and 2020, not all types of properties. Those in private rented accommodation are more than 3 times as likely to experience fuel poverty. Of those households who do experience fuel poverty, an increasing number of them are living in privately rented homes.\n\nN. Rennie | Data: www.gov.uk | #30DayChartChallenge", 90)
+st <- str_wrap_break("Although the percentage of UK households experiencing fuel poverty decreased between 2010 and 2020, not all types of properties are equal. Those in private rented accommodation are more than 3 times as likely to experience fuel poverty. Of those households who do experience fuel poverty, an increasing number of them are living in privately rented homes.\n\nN. Rennie | Data: www.gov.uk | #30DayChartChallenge", 54)
+
+p3 <- ggplot() +
+  annotate("text", x = 0, y = 0, label = st,
+           colour = '#ffb997', family="poiret", size=4, hjust = 0) +
+  xlim(0, 4) +
+  theme_minimal() +
+  theme(legend.position = "none",
+        panel.background = element_rect(fill = "#0b032d", colour = "#0b032d"),
+        plot.background = element_rect(fill = "#0b032d", colour = "#0b032d"),
+        axis.text = element_blank(),
+        axis.title.y = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank())
+p3
 
 # join plots
-p <- p1 + p2 + plot_layout(nrow = 2) +
-  plot_annotation(title = "Fuel Poverty in the United Kingdom",
-                  subtitle = st) &
-  theme(plot.subtitle = element_text(colour = '#ffb997', family="poiret", size=14,
-                                     margin = margin(b = 10)),
-        plot.title = element_text(colour = '#ffb997', family="bowlby", size=24,
+p <- ((p1 + p3) / p2) +
+  plot_annotation(title = "Fuel Poverty in the United Kingdom") &
+  theme(plot.title = element_text(colour = '#ffb997', family="bowlby", size=24,
                                   margin = margin(b = 10)),
         panel.background = element_rect(fill = "#0b032d", colour = "#0b032d"),
         plot.background = element_rect(fill = "#0b032d", colour = "#0b032d"),
