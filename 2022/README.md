@@ -51,3 +51,8 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <p align="center">
 <img src="viz/day_09.png?raw=true" width="50%">
 </p>
+
+## Day 10 (Experimental) in R
+<p align="center">
+<img src="viz/day_10.jpg?raw=true" width="50%">
+</p>
