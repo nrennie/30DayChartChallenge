@@ -66,3 +66,8 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <p align="center">
 <img src="viz/day_12.png?raw=true" width="50%">
 </p>
+
+## Day 13 (Correlation) in R
+<p align="center">
+<img src="viz/day_13.png?raw=true" width="50%">
+</p>
