@@ -1,0 +1,93 @@
+---
+title: "#30DayChartChallenge: Day 14"
+subtitle: "Life expectancy, household income, and rental prices in the USA"
+format:
+  html:
+    code-fold: true
+jupyter: python3
+---
+
+For the *3-dimensional* theme of day 14 of the 30 Day Chart Challenge, these 3D scatter plots show the relationship between life expectancy, household income, and rental prices in the USA. They are visualised in Python (left) and R (right).
+
+:::: {style="display: flex;"}
+::: {style="width: 50%;"}
+```{python}
+#| echo = FALSE
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd 
+from mpl_toolkits import mplot3d
+
+df_life = pd.read_csv("../data/usa_life.csv") 
+df_life = df_life[["State", "overall"]] 
+
+df_rent = pd.read_csv("../data/usa_rent.csv") 
+df_rent = df_rent[["State", "MedianRent"]] 
+
+df_income = pd.read_csv("../data/usa_income.csv") 
+df_income = df_income[["State", "HouseholdIncome"]] 
+
+plot_data = df_life.merge(df_rent, on='State', how='left')
+plot_data = plot_data.merge(df_income, on='State', how='left')
+
+ax = plt.axes(projection='3d')
+ax.scatter3D(plot_data['MedianRent'], plot_data['overall'], plot_data['HouseholdIncome'])
+
+ax.set_xlabel("Median Rent ($)")
+ax.set_ylabel("Life Expectancy")
+ax.set_zlabel("Median Household Income ($)")
+ax.xaxis.set_ticklabels([])
+ax.yaxis.set_ticklabels([])
+ax.zaxis.set_ticklabels([])
+```
+:::
+::: {style="width: 50%;"}
+
+```{r}
+#| echo = FALSE,
+#| warning = FALSE,
+#| message = FALSE
+
+library(tidyverse)
+library(plot3D)
+
+# read data: https://worldpopulationreview.com/state-rankings/life-expectancy-by-state
+df_life <- tibble(read.csv("../data/usa_life.csv")) %>%
+  rename(state = "ï..State") %>%
+  select(state, overall) %>%
+  mutate(state = str_to_lower(state))
+
+# read data: https://worldpopulationreview.com/state-rankings/average-rent-by-state
+df_rent <- tibble(read.csv("../data/usa_rent.csv")) %>%
+  rename(state = "ï..State") %>%
+  select(state, MedianRent) %>%
+  mutate(state = str_to_lower(state))
+
+# read data: https://worldpopulationreview.com/state-rankings/median-household-income-by-state
+df_income <- tibble(read.csv("../data/usa_income.csv")) %>%
+  rename(state = "ï..State") %>%
+  select(state, HouseholdIncome) %>%
+  mutate(state = str_to_lower(state))
+
+# prep data
+plot_data <- df_rent %>% 
+  left_join(df_life, by = "state") %>% 
+  left_join(df_income, by = "state")
+
+scatter3D(x = plot_data$MedianRent,
+          y = plot_data$overall,
+          z = plot_data$HouseholdIncome, 
+          xlab = "Median Rent ($)",
+          ylab = "Life Expectancy",
+          zlab = "Median Household Income ($)", 
+          colvar = FALSE,
+          col = c("purple"),
+          colkey = FALSE,
+          pch = 19,
+          bty = "u",
+          phi = 0, 
+          col.axis = "#696969",
+          col.grid = "#efefef")
+```
+:::
+::::
