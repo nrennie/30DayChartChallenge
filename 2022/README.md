@@ -76,3 +76,8 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <p align="center">
 <img src="viz/day_14.png?raw=true" width="50%">
 </p>
+
+## Day 15 (Multivariate) in R
+<p align="center">
+<img src="viz/day_15.jpg?raw=true" width="50%">
+</p>
