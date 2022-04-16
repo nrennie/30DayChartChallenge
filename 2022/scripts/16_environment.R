@@ -4,6 +4,7 @@ library(usefunc)
 library(showtext)
 library(rcartocolor)
 
+# https://data.gov.uk/dataset/e439aef1-d781-4afc-a371-d62673536522/serious-pollution-incidents-affecting-water-air-and-land-2002-to-2010/datafile/2bf2a687-1f02-4d8e-bc3d-ae5b4cd8ea75/preview
 df <- tibble(read_csv("2022/data/pollution.csv")[15:23,])
 
 # add fonts
@@ -12,7 +13,7 @@ font_add_google(name = "Ubuntu", family = "ubuntu")
 showtext_auto()
 
 # subtitle
-st <- str_wrap_break("The number of serious pollution incidents affecting water, air or land decreased between 2002 and 2010. Most serious pollution incidents in the United Kingdom after water, with air pollution being the least common. The total number of pollution incidents per year is shown in grey, and the number of air, land, and water incidents are shown in purple, green, and blue, respectively.\n\nN. Rennie | Data: Environment Agency", 100)
+st <- str_wrap_break("The number of serious pollution incidents affecting water, air or land decreased between 2002 and 2010. Most serious pollution incidents in the United Kingdom affect water, with air pollution being the least common. The total number of pollution incidents per year is shown in grey, and the number of air, land, and water incidents are shown in purple, green, and blue, respectively.\n\nN. Rennie | Data: Environment Agency", 100)
 
 # prep data
 plot_data <- df %>%
