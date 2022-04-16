@@ -81,3 +81,8 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <p align="center">
 <img src="viz/day_15.jpg?raw=true" width="50%">
 </p>
+
+## Day 16 (Environment) in R
+<p align="center">
+<img src="viz/day_16.jpg?raw=true" width="50%">
+</p>
