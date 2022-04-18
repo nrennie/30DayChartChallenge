@@ -91,3 +91,8 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <p align="center">
 <img src="viz/day_17.jpg?raw=true" width="50%">
 </p>
+
+## Day 18 (OECD) in R
+<p align="center">
+<img src="viz/day_18.jpg?raw=true" width="50%">
+</p>
