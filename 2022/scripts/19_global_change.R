@@ -22,11 +22,18 @@ df2 <- read_csv("2022/data/child-mortality.csv") %>%
 st <- str_wrap_break("The maternal mortality ratio is the number of women who die from pregnancy-related causes while pregnant or within 42 days of pregnancy termination per 100,000 live births.\n\nThere are, however, a few countries where a young women today is more likely to die in childbirth than her mother was a generation ago: the United States, Serbia, Georgia, Saint Lucia, the Bahamas, North Korea, Jamaica, Tonga, Venezuela, South Africa, Suriname, Guyana and Zimbabwe.\n\n - Our World in Data", 130)
 cap <- str_wrap_break("*Data is not available for every country in every year. An average across all available countries is taken each year. Some spikes in maternal mortality may be due to an increasing amount of data collected in countries where maternal mortality is higher, rather than a global increase. Estimates of average global maternal mortality may only be reliable since the 1990s.\n\nN. Rennie | Data: Our World in Data | #30DayChartChallenge", 130)
 
+# gradient shading
+grad_df <- data.frame(yintercept = seq(0, 1100, length.out = 1000),
+                      alpha = seq(0.4, 0, length.out = 1000))
+
 # plot
 ggplot() +
   geom_area(data = df,
             mapping = aes(x = Year, y = mean_ratio),
             fill = "#811453") +
+  geom_hline(data = grad_df, aes(yintercept = yintercept, alpha = alpha),
+             size = 0.3, colour = "white") +
+  scale_alpha_identity() +
   labs(title = "Global Maternal Mortality",
        subtitle = st,
        caption = cap,
@@ -34,6 +41,7 @@ ggplot() +
        y = "Maternal mortality ratio (per 100, 000)") +
   coord_cartesian(expand = F) +
   theme(plot.margin = unit(c(0.5, 1.2, 0.5, 0.5), "cm"),
+        legend.position = "none",
         panel.background = element_rect(fill = "#FAFAFA", colour = "#FAFAFA"),
         plot.background = element_rect(fill = "#FAFAFA", colour = "#FAFAFA"),
         plot.title = element_text(family = "ubuntu", hjust = 0, face = "bold", size = 22, color = "black",
@@ -44,4 +52,5 @@ ggplot() +
         axis.title.y = element_text(family = "ubuntu", hjust = 0.5,
                                     size = 10, color = "black",
                                     margin = margin(r = 10)),
-        axis.ticks.y = element_blank())
+        axis.ticks.y = element_blank(),
+        panel.grid = element_blank())
