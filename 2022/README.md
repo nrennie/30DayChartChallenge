@@ -112,7 +112,7 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <img src="viz/day_21.jpg?raw=true" width="50%">
 </p>
 
-## Day 22 (Animation) in IR
+## Day 22 (Animation) in R
 <p align="center">
 <img src="viz/day_22.gif?raw=true" width="50%">
 </p>
