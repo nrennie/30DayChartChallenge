@@ -107,6 +107,11 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <img src="viz/day_20.png?raw=true" width="50%">
 </p>
 
+## Day 21 (Down and Upwards) in R
+<p align="center">
+<img src="viz/day_21.jpg?raw=true" width="50%">
+</p>
+
 ## Day 22 (Animation) in IR
 <p align="center">
 <img src="viz/day_22.gif?raw=true" width="50%">
