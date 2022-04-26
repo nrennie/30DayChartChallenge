@@ -131,3 +131,8 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <p align="center">
 <img src="viz/day_25.png?raw=true" width="50%">
 </p>
+
+## Day 26 (Interactive) in R
+<p align="center">
+<img src="viz/day_26.png?raw=true" width="50%">
+</p>
