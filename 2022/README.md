@@ -142,6 +142,11 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <img src="viz/day_27.png?raw=true" width="50%">
 </p>
 
+## Day 28 (Deviations) in RAWgraphs and Inkscape
+<p align="center">
+<img src="viz/day_28.png?raw=true" width="50%">
+</p>
+
 ## Day 29 (Storytelling) in R and Inkscape
 <p align="center">
 <img src="viz/day_29_final.png?raw=true" width="50%">
