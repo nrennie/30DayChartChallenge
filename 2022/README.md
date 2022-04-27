@@ -137,6 +137,11 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <img src="viz/day_26.png?raw=true" width="50%">
 </p>
 
+## Day 27 (Future) in R 
+<p align="center">
+<img src="viz/day_27.png?raw=true" width="50%">
+</p>
+
 ## Day 29 (Storytelling) in R and Inkscape
 <p align="center">
 <img src="viz/day_29_final.png?raw=true" width="50%">
