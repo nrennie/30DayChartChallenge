@@ -6,6 +6,16 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <img src="prompts.jpg?raw=true" width="60%">
 </p>
 
+## 2022
+
+<p align="center">
+<img src="viz/30daychartchallenge2022.png?raw=true" width="60%">
+</p>
+
+<p align="center">
+<img src="viz/30daychartchallenge2022.gif?raw=true" width="60%">
+</p>
+
 ## Day 1 (Part to whole) in R
 <p align="center">
 <img src="viz/day_01.jpg?raw=true" width="50%">
