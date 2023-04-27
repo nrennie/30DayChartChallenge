@@ -12,3 +12,8 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <p align="center">
 <img src="viz/04_historical.png?raw=true" width="50%">
 </p>
+
+### Day 28 (Trend) in R
+<p align="center">
+<img src="viz/28_trend.png?raw=true" width="50%">
+</p>
