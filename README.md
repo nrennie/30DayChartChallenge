@@ -1,10 +1,8 @@
 # 30 Day Chart Challenge
 
-A repository containing code for the #30DayChartChallenge. Check out the challenge at [twitter.com/30DayChartChall](https://twitter.com/30DayChartChall). You can also see my contributions for the challenge on twitter at [@nrennie35](https://twitter.com/nrennie35) from April 1 - 30 2022.
+A repository containing code for the #30DayMapChallenge. Check out the challenge on [GitHub](https://github.com/30DayChartChallenge/Edition2024). You can also see my contributions for the challenge on [Twitter](https://twitter.com/nrennie35), [Mastodon](https://fosstodon.org/@nrennie), or [BlueSky](https://bsky.app/profile/nrennie.bsky.social)
 
-## 2022
-
-<p align="center">
-<img src="2022/viz/30daychartchallenge2022.png?raw=true" width="60%">
-</p>
+* [2022](/tree/main/2022)
+* [2023](/tree/main/2023)
+* [2024](/tree/main/2024)
 
