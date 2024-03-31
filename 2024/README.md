@@ -9,5 +9,5 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 ## Day 1 (Part to whole) in R
 
 <p align="center">
-<img src="viz/01_part_to_whole.png" width="50%">
+<img src="viz/01_part_to_whole.png" width="60%">
 </p>
