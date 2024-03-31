@@ -173,7 +173,7 @@ ggplot(plot_data) +
 # Save gif ----------------------------------------------------------------
 
 gg_playback(
-  name = file.path("2024", paste0("day_01", ".gif")),
+  name = file.path("2024", "viz", "gifs", paste0("day_01", ".gif")),
   first_image_duration = 4,
   last_image_duration = 20,
   frame_duration = .25,
