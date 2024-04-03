@@ -179,3 +179,5 @@ gg_playback(
   frame_duration = .25,
   background = bg_col
 )
+
+unlink("2024/recording/", recursive = TRUE)
