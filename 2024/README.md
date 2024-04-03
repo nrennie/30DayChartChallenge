@@ -17,3 +17,9 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <p align="center">
 <img src="viz/02_neo.png" width="60%">
 </p>
+
+## Day 3 (Makeover) in R
+
+<p align="center">
+<img src="viz/03_makeover.png" width="60%">
+</p>
