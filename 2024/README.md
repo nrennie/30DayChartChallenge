@@ -29,3 +29,9 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <p align="center">
 <img src="viz/04_waffle.png" width="60%">
 </p>
+
+## Day 5 (Diverging) in Python
+
+<p align="center">
+<img src="viz/05_diverging.png" width="60%">
+</p>
