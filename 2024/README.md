@@ -23,3 +23,9 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <p align="center">
 <img src="viz/03_makeover.png" width="60%">
 </p>
+
+## Day 4 (Waffle) in R
+
+<p align="center">
+<img src="viz/04_waffle.png" width="60%">
+</p>
