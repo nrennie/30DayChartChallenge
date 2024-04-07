@@ -35,3 +35,9 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <p align="center">
 <img src="viz/05_diverging.png" width="60%">
 </p>
+
+## Day 6 (OECD) in R
+
+<p align="center">
+<img src="viz/06_oecd.png" width="60%">
+</p>
