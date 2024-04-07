@@ -41,3 +41,15 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <p align="center">
 <img src="viz/06_oecd.png" width="60%">
 </p>
+
+## Day 7 (Hazards) in R
+
+Coming soon!
+
+## Day 8 (Circular) in R
+
+<p align="center">
+<img src="viz/08_circular.png" width="60%">
+</p>
+
+
