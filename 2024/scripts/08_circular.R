@@ -103,12 +103,23 @@ ggplot(
       y = ValuePerIssue / 2
     ),
     fill = highlight_col,
-    # width = 0.875
   ) +
   geom_chicklet(
     fill = highlight_col,
     colour = NA,
     radius = grid::unit(5, "mm")
+  ) +
+  geom_text(
+    mapping = aes(
+      x = Name,
+      y = ValuePerIssue - 65,
+      label = paste0("$", round(ValuePerIssue))
+    ),
+    colour = text_col,
+    family = body_font,
+    fontface = "bold",
+    size = 8,
+    hjust = 1
   ) +
   # add images
   geom_image(
