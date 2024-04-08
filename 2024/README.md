@@ -44,7 +44,9 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 
 ## Day 7 (Hazards) in R
 
-Coming soon!
+<p align="center">
+<img src="viz/07_hazards.png" width="60%">
+</p>
 
 ## Day 8 (Circular) in R
 
