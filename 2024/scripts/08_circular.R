@@ -77,7 +77,7 @@ social <- nrBrand::social_caption(
 )
 st <- "The trend of buying comics based on value speculation crippled the entire
 comic book industry for over a decade in the late 1990’s and early 2000’s. Here, the top
-10 most valueable X-Men characters are defined by there average value per issue. The
+10 most valueable X-Men characters are defined by their average value per issue. The
 total value of each X-Men team member's total number of issues as reflected by
 eBay sales in 2022 in which sellers tagged the issue as VG (Very Good) Condition is
 divided by the total number of issues each X-Men member appeared in between 1963 and 1992."
