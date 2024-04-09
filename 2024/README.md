@@ -54,4 +54,10 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <img src="viz/08_circular.png" width="60%">
 </p>
 
+## Day 9 (Major / Minor) in R
+
+<p align="center">
+<img src="viz/09_major_minor.png" width="60%">
+</p>
+
 
