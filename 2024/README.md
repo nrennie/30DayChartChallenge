@@ -60,4 +60,25 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <img src="viz/09_major_minor.png" width="60%">
 </p>
 
+## Day 10 (Physical) in crochet
+
+Coming soon!
+
+## Day 11 (Mobile-friendly) in R
+
+Coming soon!
+
+## Day 12 (Reuters Theme) in R
+
+Coming soon!
+
+## Day 13 (Family) in R
+
+<p align="center">
+<img src="viz/13_family.png" width="60%">
+</p>
+
+## Day 14 (Heatmap) in R
+
+Coming soon!
 
