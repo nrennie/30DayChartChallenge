@@ -80,5 +80,7 @@ Coming soon!
 
 ## Day 14 (Heatmap) in R
 
-Coming soon!
+<p align="center">
+<img src="viz/14_heatmap.png" width="60%">
+</p>
 
