@@ -66,7 +66,9 @@ Coming soon!
 
 ## Day 11 (Mobile-friendly) in R
 
-Coming soon!
+<p align="center">
+<img src="viz/11_mobile_friendly.png" width="60%">
+</p>
 
 ## Day 12 (Reuters Theme) in R
 
