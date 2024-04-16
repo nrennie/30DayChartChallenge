@@ -86,3 +86,12 @@ Coming soon!
 <img src="viz/14_heatmap.png" width="60%">
 </p>
 
+## Day 15 (Historical) in R
+
+Coming soon!
+
+## Day 16 (Weather) in R
+
+<p align="center">
+<img src="viz/16_weather.png" width="60%">
+</p>
