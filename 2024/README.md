@@ -88,7 +88,9 @@ Coming soon!
 
 ## Day 15 (Historical) in R
 
-Coming soon!
+<p align="center">
+<img src="viz/15_historical.png" width="60%">
+</p>
 
 ## Day 16 (Weather) in R
 
