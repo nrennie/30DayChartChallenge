@@ -38,5 +38,5 @@ all_data <- purrr::map_df(
 )
 
 # Save file
-writexl::write_xlsx(all_data, "data/all_data.xlsx")
+readr::write_csv(all_data, "data/all_data.csv")
 save(all_data, file = "data/all_data.RData")

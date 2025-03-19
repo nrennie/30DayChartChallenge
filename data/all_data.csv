@@ -1,0 +1,49 @@
+year,prompt,number,tool,image_url
+2022,Day 1 (Part to whole),01,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2022/viz/day_01.jpg
+2022,Day 2 (Pictogram),02,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2022/viz/day_02.jpg
+2022,Day 3 (Historical),03,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2022/viz/day_03.jpg
+2022,Day 4 (Flora),04,Tableau  and R ,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2022/viz/day_04.png
+2022,Day 5 (Slope),05,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2022/viz/day_05.png
+2022,Day 6 (Our World in Data),06,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2022/viz/day_06.jpg
+2022,Day 7 (Physical),07,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2022/viz/day_07.jpg
+2022,Day 8 (Mountains),08,Figma,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2022/viz/day_08.png
+2022,Day 9 (Statistics),09,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2022/viz/day_09.png
+2022,Day 10 (Experimental),10,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2022/viz/day_10.jpg
+2022,Day 11 (Circular),11,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2022/viz/day_11.jpg
+2022,Day 12 (The Economist),12,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2022/viz/day_12.png
+2022,Day 13 (Correlation),13,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2022/viz/day_13.png
+2022,Day 14 (3-Dimensional),14,Python and R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2022/viz/day_14.png
+2022,Day 15 (Multivariate),15,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2022/viz/day_15.jpg
+2022,Day 16 (Environment),16,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2022/viz/day_16.jpg
+2022,Day 17 (Connections),17,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2022/viz/day_17.jpg
+2022,Day 18 (OECD),18,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2022/viz/day_18.jpg
+2022,Day 19 (Global Change),19,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2022/viz/day_19.jpg
+2022,Day 20 (New Tool),20,Inkscape,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2022/viz/day_20.png
+2022,Day 21 (Down and Upwards),21,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2022/viz/day_21.jpg
+2022,Day 22 (Animation),22,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2022/viz/day_22.jpg
+2022,Day 23 (Tiles),23,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2022/viz/day_23.jpg
+2022,Day 24 (Financial Times),24,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2022/viz/day_24.jpg
+2022,Day 25 (Trend),25,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2022/viz/day_25.png
+2022,Day 26 (Interactive),26,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2022/viz/day_26.png
+2022,Day 27 (Future),27,R ,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2022/viz/day_27.png
+2022,Day 28 (Deviations),28,RAWgraphs and Inkscape,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2022/viz/day_28.png
+2022,Day 29 (Storytelling),29,R and Inkscape,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2022/viz/day_29.png
+2022,Day 30 (UN Population),30,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2022/viz/day_30.png
+2023,Day 4 (Historical),04,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2023/viz/day_04.png
+2023,Day 28 (Trend),28,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2023/viz/day_28.png
+2024,Day 1 (Part to whole),01,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2024/viz/day_01.png
+2024,Day 2 (Neo),02,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2024/viz/day_02.png
+2024,Day 3 (Makeover),03,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2024/viz/day_03.png
+2024,Day 4 (Waffle),04,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2024/viz/day_04.png
+2024,Day 5 (Diverging),05,Python,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2024/viz/day_05.png
+2024,Day 6 (OECD),06,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2024/viz/day_06.png
+2024,Day 7 (Hazards),07,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2024/viz/day_07.png
+2024,Day 8 (Circular),08,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2024/viz/day_08.png
+2024,Day 9 (Major / Minor),09,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2024/viz/day_09.png
+2024,Day 10 (Physical),10,Crochet,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2024/viz/day_10.jpg
+2024,Day 11 (Mobile-friendly),11,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2024/viz/day_11.png
+2024,Day 13 (Family),13,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2024/viz/day_13.png
+2024,Day 14 (Heatmap),14,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2024/viz/day_14.png
+2024,Day 15 (Historical),15,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2024/viz/day_15.png
+2024,Day 16 (Weather),16,R,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2024/viz/day_16.png
+2025,Day 1 (Fractions),01,ObservableJS,https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/2025/viz/day_01.png
