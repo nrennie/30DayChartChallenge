@@ -19,11 +19,14 @@ get_readme <- function(year) {
     dplyr::mutate(
       year = year,
       prompt = str_extract_between(raw_char, "## ", " in "),
-      tool = "",
-      image_url = "",
+      number = stringr::str_pad(readr::parse_number(prompt), 2, pad = "0"),
+      tool = stringr::str_match(raw_char, ".*in\\s*(.*)$")[,2],
+      tool = stringr::str_remove_all(tool, "\\[.*?\\]|\\(.*?\\)|\\{.*?\\}"),
+      file_ext = dplyr::if_else(year == 2022, ".jpg", ".png"),
+      image_url = glue::glue("https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/{year}/viz/day_{number}{file_ext}"),
       code_url = ""
     ) |>
-    dplyr::select(-raw_char)
+    dplyr::select(-c(raw_char, file_ext))
   return(yr_output)
   }
 
