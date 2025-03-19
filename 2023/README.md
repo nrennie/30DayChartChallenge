@@ -8,10 +8,10 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 
 ## Day 4 (Historical) made with R
 <p align="center">
-<img src="viz/04_historical.png" width="50%">
+<img src="viz/day_04.png" width="50%">
 </p>
 
 ## Day 28 (Trend) made with R
 <p align="center">
-<img src="viz/28_trend.png" width="50%">
+<img src="viz/day_28.png" width="50%">
 </p>

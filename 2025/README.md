@@ -8,5 +8,5 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 
 ## Day 1 (Fractions) made with ObservableJS
 <p align="center">
-<img src="viz/01_fractions.png" width="60%">
+<img src="viz/day_01.png" width="60%">
 </p> 

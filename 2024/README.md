@@ -8,47 +8,47 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 
 ## Day 1 (Part to whole) made with R
 <p align="center">
-<img src="viz/01_part_to_whole.png" width="60%">
+<img src="viz/day_01.png" width="60%">
 </p>
 
 ## Day 2 (Neo) made with R
 <p align="center">
-<img src="viz/02_neo.png" width="60%">
+<img src="viz/day_02.png" width="60%">
 </p>
 
 ## Day 3 (Makeover) made with R
 <p align="center">
-<img src="viz/03_makeover.png" width="60%">
+<img src="viz/day_03.png" width="60%">
 </p>
 
 ## Day 4 (Waffle) made with R
 <p align="center">
-<img src="viz/04_waffle.png" width="60%">
+<img src="viz/day_04.png" width="60%">
 </p>
 
 ## Day 5 (Diverging) made with Python
 <p align="center">
-<img src="viz/05_diverging.png" width="60%">
+<img src="viz/day_05.png" width="60%">
 </p>
 
 ## Day 6 (OECD) made with R
 <p align="center">
-<img src="viz/06_oecd.png" width="60%">
+<img src="viz/day_06.png" width="60%">
 </p>
 
 ## Day 7 (Hazards) made with R
 <p align="center">
-<img src="viz/07_hazards.png" width="60%">
+<img src="viz/day_07.png" width="60%">
 </p>
 
 ## Day 8 (Circular) made with R
 <p align="center">
-<img src="viz/08_circular.png" width="60%">
+<img src="viz/day_08.png" width="60%">
 </p>
 
 ## Day 9 (Major / Minor) made with R
 <p align="center">
-<img src="viz/09_major_minor.png" width="60%">
+<img src="viz/day_09.png" width="60%">
 </p>
 
 ## Day 10 (Physical) made with Crochet
@@ -58,25 +58,25 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 
 ## Day 11 (Mobile-friendly) made with R
 <p align="center">
-<img src="viz/11_mobile_friendly.png" width="60%">
+<img src="viz/day_11.png" width="60%">
 </p>
 
 ## Day 13 (Family) made with R
 <p align="center">
-<img src="viz/13_family.png" width="60%">
+<img src="viz/day_13.png" width="60%">
 </p>
 
 ## Day 14 (Heatmap) made with R
 <p align="center">
-<img src="viz/14_heatmap.png" width="60%">
+<img src="viz/day_14.png" width="60%">
 </p>
 
 ## Day 15 (Historical) made with R
 <p align="center">
-<img src="viz/15_historical.png" width="60%">
+<img src="viz/day_15.png" width="60%">
 </p>
 
 ## Day 16 (Weather) made with R
 <p align="center">
-<img src="viz/16_weather.png" width="60%">
+<img src="viz/day_16.png" width="60%">
 </p>
