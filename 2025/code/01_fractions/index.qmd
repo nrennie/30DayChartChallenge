@@ -1,0 +1,81 @@
+---
+execute:
+  eval: true
+  echo: false
+format:
+  html:
+    embed-resources: true
+---
+
+```{r}
+#| eval: false
+download.file(
+  url = "https://www.ons.gov.uk/download/table?format=csv&uri=/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/annualmidyearpopulationestimates/mid2023/4ffbacee.json",
+  destfile = "2025/data/uk_pop.csv"
+)
+```
+
+```{r}
+#| warning: false
+#| message: false
+uk_pop <- readr::read_csv("2025/data/uk_pop.csv", skip = 3)
+plot_data <- uk_pop |>
+  dplyr::filter(`...1` == "Population 2023") |>
+  dplyr::select(-c(1, 2)) |>
+  tidyr::pivot_longer(
+    cols = dplyr::everything(),
+    names_to = "group", values_to = "freq"
+  ) |>
+  dplyr::mutate(
+    label = purrr::map_chr(
+      .x = stringr::str_extract_all(group, "[A-Z]+"),
+      .f = ~ stringr::str_flatten(.x)
+    ),
+    freq = readr::parse_number(freq)
+  ) |> 
+  dplyr::arrange(dplyr::desc(freq))
+ojs_define(plot_data = plot_data)
+```
+
+```{ojs}
+d3 = require("d3@7")
+```
+
+```{ojs}
+data = transpose(plot_data)
+units = data.flatMap(d => d3.range(Math.round(d.freq / 1000000)).map(() => d))
+```
+
+```{ojs}
+Plot.plot({
+  marks: [
+    Plot.cell(
+      units,
+      Plot.stackX({
+        y: (_, i) => i % 4,
+        fill: "label",
+        title: "group"
+      })
+    ),
+    Plot.text(
+      units,
+      Plot.stackX({
+        y: (_, i) => i % 4,
+        text: "label",
+        fontWeight:"bold", fontSize:"14"
+      }),
+    ),
+    Plot.text([`Population of the UK residing in England (E), Scotland (S), Wales (W), and Northern Ireland (NI).`], {frameAnchor:"top-left", dy:-40, fontWeight:"bold", fontSize:"16", textAnchor:"start"}),
+    Plot.text([`Each cell represents approximately 1 million people.`], {frameAnchor:"top-left", dy:-17, fontSize:"14", textAnchor:"start"}),
+    Plot.text([`Data: Population estimates for mid-2023 (https://shorturl.at/Gp5Yd).`], {frameAnchor:"bottom-left", dy:20, fontSize:"12", textAnchor:"start"})
+  ],
+  x: { axis: null },
+  y: { axis: null },
+  marginTop: 50,
+  marginBottom: 30,
+  marginLeft: 10,
+  marginRight: 5,
+  width: 800, height: 500,
+  color: { scheme: "pastel2" }
+})
+```
