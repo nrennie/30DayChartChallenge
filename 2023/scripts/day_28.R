@@ -299,9 +299,11 @@ g +
 
 # save gif
 gg_playback(
-  name = file.path("2023", "viz", "28_trend.gif"),
+  name = file.path("2023", "viz", "day_28.gif"),
   first_image_duration = 4,
   last_image_duration = 20,
   frame_duration = .25,
   background = "#F0F5F5"
 )
+
+ggsave("2023/viz/day_28.png", width = 8.27, height = 11.69, unit = "in")

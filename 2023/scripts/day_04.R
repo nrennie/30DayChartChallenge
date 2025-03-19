@@ -209,4 +209,4 @@ g_data +
             family = "Fraunces",
             size = 14)
 
-ggsave("2023/viz/04_historical.png", width = 8, height = 6, unit = "in")
+ggsave("2023/viz/day_04.png", width = 8, height = 6, unit = "in")
