@@ -6,12 +6,12 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <img src="prompts.jpg" width="60%">
 </p>
 
-## Day 4 (Historical) in R
+## Day 4 (Historical) made with R
 <p align="center">
 <img src="viz/04_historical.png" width="50%">
 </p>
 
-## Day 28 (Trend) in R
+## Day 28 (Trend) made with R
 <p align="center">
 <img src="viz/28_trend.png" width="50%">
 </p>

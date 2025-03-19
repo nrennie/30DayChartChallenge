@@ -6,7 +6,7 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <img src="prompts.png" width="60%">
 </p>
 
-## Day 1 (Fractions) in ObservableJS
+## Day 1 (Fractions) made with ObservableJS
 <p align="center">
 <img src="viz/01_fractions.png" width="60%">
 </p> 
