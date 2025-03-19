@@ -5,7 +5,7 @@ str_extract_between <- function(x, start, end) {
 }
 
 # Params
-years <- c(2022, 2023, 2024)
+years <- c(2022, 2023, 2024, 2025)
 
 # Function
 get_readme <- function(year) {
@@ -14,17 +14,18 @@ get_readme <- function(year) {
     tibble::as_tibble()
 
   yr_output <- yr_readme |>
-    dplyr::filter(stringr::str_detect(raw_char, "##"),
-                  stringr::str_detect(raw_char, glue::glue("{year}"), negate = TRUE)) |>
+    dplyr::filter(stringr::str_detect(raw_char, "##")) |>
     dplyr::mutate(
       year = year,
-      prompt = str_extract_between(raw_char, "## ", " in "),
+      prompt = str_extract_between(raw_char, "## ", " made with "),
       number = stringr::str_pad(readr::parse_number(prompt), 2, pad = "0"),
-      tool = stringr::str_match(raw_char, ".*in\\s*(.*)$")[,2],
+      tool = stringr::str_match(raw_char, ".*made with\\s*(.*)$")[,2],
       tool = stringr::str_remove_all(tool, "\\[.*?\\]|\\(.*?\\)|\\{.*?\\}"),
-      file_ext = dplyr::if_else(year == 2022, ".jpg", ".png"),
-      image_url = glue::glue("https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/{year}/viz/day_{number}{file_ext}"),
-      code_url = ""
+      image_url = glue::glue("https://raw.githubusercontent.com/nrennie/30DayChartChallenge/refs/heads/main/{year}/viz/day_{number}"),
+      file_ext = dplyr::if_else(
+        file.exists(glue::glue("{year}/viz/day_{number}.jpg")), ".jpg", ".png"
+      ),
+      image_url = glue::glue("{image_url}{file_ext}")
     ) |>
     dplyr::select(-c(raw_char, file_ext))
   return(yr_output)
