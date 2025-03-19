@@ -10,3 +10,8 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <p align="center">
 <img src="viz/day_01.png" width="60%">
 </p> 
+
+## Day 2 (Slope) made with ObservableJS
+<p align="center">
+<img src="viz/day_02.png" width="60%">
+</p> 

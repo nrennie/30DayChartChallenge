@@ -1,4 +1,3 @@
-
 # Function to save a PNG --------------------------------------------------
 
 save_ojs_png <- function(day, ...) {
@@ -24,6 +23,6 @@ save_ojs_png <- function(day, ...) {
 save_ojs_png("01")
 
 
-# Day 2 - Slopes ----------------------------------------------------------
+# Day 2 - Slope -----------------------------------------------------------
 
-save_ojs_png("02", vheight = 1200)
+save_ojs_png("02", vwidth = 1000, vheight = 1600)

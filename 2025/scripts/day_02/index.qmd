@@ -1,0 +1,99 @@
+---
+execute:
+  eval: true
+  echo: false
+format:
+  html:
+    embed-resources: true
+---
+
+```{css}
+path:hover {stroke-width: 5px; color: #087E8B;}
+```
+
+
+```{r}
+#| warning: false
+#| message: false
+# Data: https://ourworldindata.org/economic-inequality
+income <- readr::read_csv("2025/data/income-share-of-the-richest-1.csv")
+plot_data <- income |>
+  dplyr::filter(stringr::str_detect(Country, "(WID)")) |>
+  dplyr::rename(Income = `Income share of the richest 1% (before tax) (World Inequality Database)`) |>
+  dplyr::filter(Year %in% c(1820, 2020)) |>
+  dplyr::mutate(Country = stringr::str_remove(Country, " \\(WID\\)")) |>
+  dplyr::group_by(Country) |>
+  dplyr::mutate(n = dplyr::n()) |>
+  dplyr::ungroup() |>
+  dplyr::filter(n == 2) |>
+  dplyr::mutate(Country = dplyr::if_else(
+    Country == "MENA", "Middle East and North Africa", Country
+  )) |> 
+  dplyr::select(-n)
+ojs_define(plot_data = plot_data)
+```
+
+```{ojs}
+d3 = require("d3@7")
+```
+
+```{ojs}
+data = transpose(plot_data)
+```
+
+```{ojs}
+// Adapted from https://observablehq.com/@observablehq/plot-slope-chart
+Plot.plot({
+  marks: [
+    Plot.text([`The share of income received by the richest 1% of the population.`], {frameAnchor:"top-left", dy:-90, dx:-110, fontWeight:"bold", fontSize:"16", textAnchor:"start"}),
+    Plot.text([`Income is measured before payment of taxes and non-pension benefits but after the payment of public and\nprivate pensions. Higher values indicate more unequal wealth distribution, meaning that, after 200 years, Oceania\nhas remained the most equal region in terms of wealth distribution.`], {frameAnchor:"top-left", fontSize:"14", textAnchor:"start", dy: -70, dx:-110}),
+    Plot.text([`Data: World Inequality Database (WID). Processed by Our World in Data.`], {frameAnchor:"bottom-left", dy:20, dx:-110, fontSize:"12", textAnchor:"start"}),
+    Plot.line(data, {x: "Year", y: "Income", z: "Country"}),
+    d3.groups(data, (d) => d.Year === 1820)
+      .map(([left, data]) =>
+        Plot.text(data, occlusionY({
+          x: "Year",
+          y: "Income",
+          text: left
+            ? (d) => `${d.Country} (${d.Income.toFixed(1)}%)`
+            : (d) => `(${d.Income.toFixed(1)}%) ${d.Country}`,
+          textAnchor: left ? "end" : "start",
+          dx: left ? -3 : 3,
+          radius: 5.5,
+          fontSize:"12"
+        }))
+      )
+  ],
+  x: {axis: "top", type: "ordinal", tickFormat: "", inset: 90, label: null, grid: true},
+  y: {axis: null, inset: 20},
+  marginTop: 110,
+  marginBottom: 30,
+  marginLeft: 120,
+  marginRight: 120,
+  width: 800, height: 1200
+})
+```
+
+```{ojs}
+occlusionY = ({radius = 6.5, ...options} = {}) => Plot.initializer(options, (data, facets, { y: {value: Y}, text: {value: T} }, {y: sy}, dimensions, context) => {
+  for (const index of facets) {
+    const unique = new Set();
+    const nodes = Array.from(index, (i) => ({
+      fx: 0,
+      y: sy(Y[i]),
+      visible: unique.has(T[i])
+        ? false
+        : !!unique.add(T[i]),
+      i
+    }));
+    d3.forceSimulation(nodes.filter((d) => d.visible))
+      .force("y", d3.forceY(({y}) => y))
+      .force("collide", d3.forceCollide().radius(radius))
+      .stop()
+      .tick(20);
+    for (const { y, node, i, visible } of nodes) Y[i] = !visible ? NaN : y;
+  }
+  return {data, facets, channels: {y: {value: Y}}};
+})
+```
+
