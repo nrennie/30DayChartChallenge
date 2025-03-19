@@ -15,6 +15,6 @@
 2025/data/
 2025/images/
 *.html
-
+*.quarto_ipynb
 
 /.quarto/
