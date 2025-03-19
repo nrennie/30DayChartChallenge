@@ -129,7 +129,7 @@ rsf
 
 # Save image --------------------------------------------------------------
 
-save_roughsf(rsf, "2024/viz/04_waffle.png", background = bg_col, wait = 4)
+save_roughsf(rsf, "2024/viz/day_04.png", background = bg_col, wait = 4)
 
 
 # Save gif ----------------------------------------------------------------

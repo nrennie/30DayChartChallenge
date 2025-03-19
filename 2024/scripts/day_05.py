@@ -30,4 +30,4 @@ p = (
 )
 
 # Save the plot
-gg.ggsave(p, filename="2024/viz/05_diverging.png", height=4, width=6, dpi=300)
+gg.ggsave(p, filename="2024/viz/day_05.png", height=4, width=6, dpi=300)
