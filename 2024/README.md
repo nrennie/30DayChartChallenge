@@ -60,19 +60,17 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <img src="viz/09_major_minor.png" width="60%">
 </p>
 
-## Day 10 (Physical) in crochet
+## Day 10 (Physical) in Crochet
 
-Coming soon!
+<p align="center">
+<img src="https://raw.githubusercontent.com/nrennie/data-viz-projects/refs/heads/main/Heatmap%20Blanket%20Pattern/images/heatmap-blanket.jpg" width="60%">
+</p>
 
 ## Day 11 (Mobile-friendly) in R
 
 <p align="center">
 <img src="viz/11_mobile_friendly.png" width="60%">
 </p>
-
-## Day 12 (Reuters Theme) in R
-
-Coming soon!
 
 ## Day 13 (Family) in R
 
