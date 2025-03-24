@@ -10,6 +10,7 @@ format:
 ```{r}
 #| warning: false
 #| message: false
+# Data: https://ourworldindata.org/economic-inequality
 income <- readr::read_csv("2025/data/income-share-of-the-richest-1.csv")
 income_world <- income |> 
   dplyr::filter(Country == "World") |> 
