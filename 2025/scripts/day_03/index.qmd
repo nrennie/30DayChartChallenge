@@ -1,0 +1,56 @@
+---
+execute:
+  eval: true
+  echo: false
+format:
+  html:
+    embed-resources: true
+---
+
+```{r}
+#| warning: false
+#| message: false
+#| eval: false
+# Data: https://ourworldindata.org/economic-inequality
+income <- readr::read_csv("2025/data/income-share-of-the-richest-1.csv")
+plot_data <- income |>
+  dplyr::filter(Year == 2023) |>
+  dplyr::filter(
+    stringr::str_detect(Country, "(WID)", negate = TRUE),
+    Country != "World"
+  ) |>
+  dplyr::mutate(Country = stringr::str_remove(Country, " \\(country\\)")) |>
+  dplyr::mutate(
+    parent = countrycode::countrycode(
+      sourcevar = Country,
+      origin = "country.name",
+      destination = "continent"
+    )
+  ) |>
+  tidyr::drop_na() |>
+  dplyr::rename(
+    value = `Income share of the richest 1% (before tax) (World Inequality Database)`,
+    name = Country
+  ) |>
+  dplyr::select(-Year) |> 
+  tidyr::nest(.by = parent, .key = "children") |> 
+  dplyr::rename(name = parent) |> 
+  dplyr::mutate(parent = "World") |> 
+  tidyr::nest(.by = parent, .key = "children") |> 
+  dplyr::rename(name = parent) 
+jsonlite::write_json(plot_data, path = "2025/data/day_03.json", pretty = TRUE)
+```
+
+```{ojs}
+d3 = require("d3@7")
+```
+
+```{ojs}
+json_data = FileAttachment("../../data/day_03.json").json()
+```
+
+```{ojs}
+import { chart } with { json_data as data } from "@d3/zoomable-sunburst"
+chart
+```
+
