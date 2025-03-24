@@ -8,32 +8,24 @@ format:
 ---
 
 ```{r}
-#| eval: false
-download.file(
-  url = "https://www.ons.gov.uk/download/table?format=csv&uri=/peoplepopulationandcommunity/populationandmigration/populationestimates/bulletins/annualmidyearpopulationestimates/mid2023/4ffbacee.json",
-  destfile = "2025/data/uk_pop.csv"
-)
-```
-
-```{r}
 #| warning: false
 #| message: false
-uk_pop <- readr::read_csv("2025/data/uk_pop.csv", skip = 3)
-plot_data <- uk_pop |>
-  dplyr::filter(`...1` == "Population 2023") |>
-  dplyr::select(-c(1, 2)) |>
+income <- readr::read_csv("2025/data/income-share-of-the-richest-1.csv")
+income_world <- income |> 
+  dplyr::filter(Country == "World") |> 
+  dplyr::slice_max(Year, n = 1) |> 
+  dplyr::rename(Income = `Income share of the richest 1% (before tax) (World Inequality Database)`)
+plot_data <- data.frame(
+  type = c("People", "Wealth"),
+  Yes = c(1, income_world$Income)
+) |> 
+  dplyr::mutate(No = 100 - Yes) |> 
   tidyr::pivot_longer(
-    cols = dplyr::everything(),
-    names_to = "group", values_to = "freq"
-  ) |>
-  dplyr::mutate(
-    label = purrr::map_chr(
-      .x = stringr::str_extract_all(group, "[A-Z]+"),
-      .f = ~ stringr::str_flatten(.x)
-    ),
-    freq = readr::parse_number(freq)
+    -type, 
+    values_to = "n",
+    names_to = "YN"
   ) |> 
-  dplyr::arrange(dplyr::desc(freq))
+  dplyr::filter(type == "Wealth")
 ojs_define(plot_data = plot_data)
 ```
 
@@ -43,7 +35,7 @@ d3 = require("d3@7")
 
 ```{ojs}
 data = transpose(plot_data)
-units = data.flatMap(d => d3.range(Math.round(d.freq / 1000000)).map(() => d))
+units = data.flatMap(d => d3.range(Math.round(d.n)).map(() => d))
 ```
 
 ```{ojs}
@@ -52,30 +44,22 @@ Plot.plot({
     Plot.cell(
       units,
       Plot.stackX({
-        y: (_, i) => i % 4,
-        fill: "label",
-        title: "group"
+        y: (_, i) => i % 5,
+        fill: "YN",
+        title: "YN"
       })
     ),
-    Plot.text(
-      units,
-      Plot.stackX({
-        y: (_, i) => i % 4,
-        text: "label",
-        fontWeight:"bold", fontSize:"14"
-      }),
-    ),
-    Plot.text([`Population of the UK residing in England (E), Scotland (S), Wales (W), and Northern Ireland (NI).`], {frameAnchor:"top-left", dy:-40, fontWeight:"bold", fontSize:"16", textAnchor:"start"}),
-    Plot.text([`Each cell represents approximately 1 million people.`], {frameAnchor:"top-left", dy:-17, fontSize:"14", textAnchor:"start"}),
-    Plot.text([`Data: Population estimates for mid-2023 (https://shorturl.at/Gp5Yd).`], {frameAnchor:"bottom-left", dy:20, fontSize:"12", textAnchor:"start"})
+    Plot.text([`1% of people have 21% of the world's wealth.`], {frameAnchor:"top-left", dy:-50, fontWeight:"bold", fontSize:"18", textAnchor:"start"}),
+    Plot.text([`The share of income received by the richest 1% of the population in 2023, where income is measured before payment of taxes\nand non-pension benefits but after the payment of public and private pensions.`], {frameAnchor:"top-left", dy:-27, fontSize:"14", textAnchor:"start"}),
+    Plot.text([`Data: World Inequality Database (WID). Processed by Our World in Data.`], {frameAnchor:"bottom-left", dy:20, fontSize:"12", textAnchor:"start"})
   ],
   x: { axis: null },
   y: { axis: null },
-  marginTop: 50,
+  marginTop: 60,
   marginBottom: 30,
   marginLeft: 10,
   marginRight: 5,
   width: 800, height: 500,
-  color: { scheme: "pastel2" }
+  color: {  range: ["#ECD5DF", "#8E4162"] }
 })
 ```
