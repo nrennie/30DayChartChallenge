@@ -32,3 +32,8 @@ save_ojs_png("02", vwidth = 1000, vheight = 1600)
 
 save_ojs_png("03", vwidth = 1000, vheight = 1000)
 
+
+# Update data -------------------------------------------------------------
+
+source("data/make-data.R")
+
