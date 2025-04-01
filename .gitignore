@@ -2,6 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
+.Renviron
 2022/data/
 2022/viz/day_22/
 2022/viz/day_29.svg
@@ -16,5 +17,4 @@
 2025/images/
 2025/scripts/*/index.html
 *.quarto_ipynb
-
 /.quarto/
