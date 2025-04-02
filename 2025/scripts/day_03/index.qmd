@@ -27,12 +27,15 @@ plot_data <- income |>
       destination = "continent"
     )
   ) |>
-  tidyr::drop_na() |>
+  tidyr::drop_na() |> 
   dplyr::rename(
     value = `Income share of the richest 1% (before tax) (World Inequality Database)`,
     name = Country
-  ) |>
+  ) |> 
   dplyr::select(-Year) |> 
+  dplyr::filter(value > 10) |> 
+  dplyr::count(name, parent) |> 
+  dplyr::rename(value = n) |> 
   tidyr::nest(.by = parent, .key = "children") |> 
   dplyr::rename(name = parent) |> 
   dplyr::mutate(parent = "World") |> 
@@ -46,11 +49,36 @@ d3 = require("d3@7")
 ```
 
 ```{ojs}
+//| output: false
 json_data = FileAttachment("../../data/day_03.json").json()
+width = 1600
 ```
 
 ```{ojs}
-import { chart } with { json_data as data } from "@d3/zoomable-sunburst"
+import { chart } with { json_data as data, width } from "@nrennie/zoomable-sunburst"
 chart
 ```
+
+```{ojs}
+//| output: false
+margin = ({top: 30, right: 30, bottom: 30, left: 30})
+d3.select(chart)
+  .append("g")
+  .append("text")
+  .attr("x", margin.left)
+  .attr("y", margin.top - 520)
+  .style("font", "30px sans-serif")
+  .style("text-anchor", "middle")
+  .text("Number of countries with wealth of richest 1% exceeding 10%.")
+  
+d3.select(chart)
+  .append("g")
+  .append("text")
+  .attr("x", margin.left)
+  .attr("y", margin.top - 500)
+  .style("font", "20px sans-serif")
+  .style("text-anchor", "middle")
+  .text("Data: World Inequality Database (WID). Processed by Our World in Data.")
+```
+
 
