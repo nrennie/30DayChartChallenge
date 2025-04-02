@@ -19,4 +19,14 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 ## Day 3 (Circular) made with Observable
 <p align="center">
 <img src="viz/day_03.png" width="60%">
+</p>
+
+## Day 4 (Big or Small) made with R
+<p align="center">
+<img src="viz/day_04.png" width="60%">
+</p> 
+
+## Day 5 (Ranking) made with Python
+<p align="center">
+<img src="viz/day_05.png" width="60%">
 </p> 
