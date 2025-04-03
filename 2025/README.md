@@ -36,6 +36,11 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <img src="viz/day_06.png" width="60%">
 </p> 
 
+## Day 7 (Outliers) made with Observable
+<p align="center">
+<img src="viz/day_07.png" width="60%">
+</p> 
+
 ## Day 11 (Stripes) made with Python
 <p align="center">
 <img src="viz/day_11.png" width="60%">
