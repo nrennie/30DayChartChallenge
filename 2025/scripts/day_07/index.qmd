@@ -37,15 +37,6 @@ data = transpose(plot_data)
 ```
 
 ```{ojs}
-dataTyped = data.map(({ Year, Income, Country, Continent }) => ({
-  Year: new Date(Year, 0, 1),
-  Income,
-  Country,
-  Continent
-}))
-```
-
-```{ojs}
 Plot.dot(data, {
   x: "Year",
   y: "Income",

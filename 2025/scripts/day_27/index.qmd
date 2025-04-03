@@ -31,11 +31,11 @@ plot_data <- income |>
   tidyr::drop_na() |> 
   dplyr::rename(
     Income = `Income share of the richest 1% (before tax) (World Inequality Database)`)
-readr::write_csv(plot_data, "2025/data/heatmap.csv")
+readr::write_csv(plot_data, "2025/data/heatmap_data.csv")
 ```
 
 ```{ojs}
-data = FileAttachment("../../data/heatmap.csv").csv({typed: true})
+data = FileAttachment("../../data/heatmap_data.csv").csv({typed: true})
 ```
 
 ```{ojs}
