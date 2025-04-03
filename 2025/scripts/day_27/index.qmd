@@ -1,0 +1,99 @@
+---
+execute:
+  eval: true
+  echo: false
+format:
+  html:
+    embed-resources: true
+---
+
+```{r}
+#| warning: false
+#| message: false
+#| eval: false
+# Data: https://ourworldindata.org/economic-inequality
+income <- readr::read_csv("2025/data/income-share-of-the-richest-1.csv")
+plot_data <- income |>
+  dplyr::filter(Year >= 1980) |>
+  dplyr::filter(
+    stringr::str_detect(Country, "(WID)", negate = TRUE),
+    Country != "World"
+  ) |>
+  dplyr::mutate(Country = stringr::str_remove(Country, " \\(country\\)")) |>
+  dplyr::mutate(
+    Continent = countrycode::countrycode(
+      sourcevar = Country,
+      origin = "country.name",
+      destination = "continent"
+    )
+  ) |>
+  dplyr::filter(Continent == "Europe") |> 
+  tidyr::drop_na() |> 
+  dplyr::rename(
+    Income = `Income share of the richest 1% (before tax) (World Inequality Database)`)
+readr::write_csv(plot_data, "2025/data/heatmap.csv")
+```
+
+```{ojs}
+data = FileAttachment("../../data/heatmap.csv").csv({typed: true})
+```
+
+```{ojs}
+Plot.plot({
+  width: 800,
+  marks: [
+    Plot.rect(data, {
+      x: "Year",
+      y: "Country",
+      fill: "Income",
+      tip: {
+        format: {
+          fill: (d) => `${d}%`,
+          x: (d) => `${d}`
+        }
+      }
+    })
+  ],
+  x: {tickFormat: "", label: null, tickSize: 0},
+  y: {label: null, tickSize: 0},
+  marginLeft: 120,
+  color: {
+    scheme: "bupu"
+  },
+  title: "The share of income received by the richest 1% of the population.",
+  subtitle: "Income is measured before payment of taxes and non-pension benefits but after the payment of public and private pensions.",
+  caption: "Data: World Inequality Database (WID). Processed by Our World in Data.",
+})
+```
+
+```{ojs}
+Plot.plot({
+  width: 900,
+  marks: [
+    Plot.rect(data, {
+      x: "Year",
+      y: "Country",
+      fill: "Income",
+      sort: {
+        y: "fill"
+      },
+      tip: {
+        format: {
+          fill: (d) => `${d}%`,
+          x: (d) => `${d}`
+        }
+      }
+    })
+  ],
+  x: {tickFormat: "", label: null, tickSize: 0, tickRotate: -30},
+  y: {label: null, tickSize: 0},
+  marginLeft: 120,
+  color: {
+    scheme: "bupu"
+  },
+  title: "The share of income received by the richest 1% of the population.",
+  subtitle: "Income is measured before payment of taxes and non-pension benefits but after the payment of public and private pensions.",
+  caption: "Data: World Inequality Database (WID). Processed by Our World in Data.",
+})
+```
+
