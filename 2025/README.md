@@ -40,3 +40,8 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <p align="center">
 <img src="viz/day_11.png" width="60%">
 </p> 
+
+## Day 17 (Birds) made with R
+<p align="center">
+<img src="viz/day_17.png" width="60%">
+</p> 
