@@ -31,6 +31,11 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <img src="viz/day_05.png" width="60%">
 </p> 
 
+## Day 6 (Florence Nightingale Theme) made with R
+<p align="center">
+<img src="viz/day_06.png" width="60%">
+</p> 
+
 ## Day 11 (Stripes) made with Python
 <p align="center">
 <img src="viz/day_11.png" width="60%">
