@@ -41,6 +41,11 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <img src="viz/day_07.png" width="60%">
 </p> 
 
+## Day 8 (Histogram) made with Observable
+<p align="center">
+<img src="viz/day_08.png" width="60%">
+</p> 
+
 ## Day 11 (Stripes) made with Python
 <p align="center">
 <img src="viz/day_11.png" width="60%">

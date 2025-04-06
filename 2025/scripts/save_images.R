@@ -38,6 +38,11 @@ save_ojs_png("03", vwidth = 1000, vheight = 1000)
 save_ojs_png("07", vwidth = 1000, vheight = 1000)
 
 
+# Day 8 - Histogram -------------------------------------------------------
+
+save_ojs_png("08", vwidth = 1000, vheight = 1000, expand = c(10, 10, 0, 10))
+
+
 # Update data -------------------------------------------------------------
 
 source("data/make-data.R")

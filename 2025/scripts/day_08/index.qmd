@@ -1,0 +1,76 @@
+---
+execute:
+  eval: true
+  echo: false
+format:
+  html:
+    embed-resources: true
+---
+
+```{r}
+#| warning: false
+#| message: false
+# Data: https://ourworldindata.org/economic-inequality
+income <- readr::read_csv("2025/data/income-share-of-the-richest-1.csv")
+plot_data <- income |>
+  dplyr::filter(Year == 2023) |>
+  dplyr::filter(
+    stringr::str_detect(Country, "(WID)", negate = TRUE),
+    Country != "World"
+  ) |>
+  dplyr::mutate(Country = stringr::str_remove(Country, " \\(country\\)")) |>
+  dplyr::mutate(
+    Continent = countrycode::countrycode(
+      sourcevar = Country,
+      origin = "country.name",
+      destination = "continent"
+    )
+  ) |>
+  tidyr::drop_na() |> 
+  dplyr::rename(
+    Income = `Income share of the richest 1% (before tax) (World Inequality Database)`)
+ojs_define(plot_data = plot_data)
+```
+
+```{ojs}
+data = transpose(plot_data)
+```
+
+
+```{ojs}
+Plot.plot({
+  marks: [
+    Plot.frame(),
+    Plot.rectY(data, Plot.binX({y: "count"}, {x: "Income", stroke: "black", fy: "Continent", fill: "Continent",
+      sort: {y: "x", fy: "x", reduce: "median", reverse: true}})),
+    Plot.ruleY([0])
+  ],
+  // Styling
+  height: 800,
+  width: 800,
+  marginRight: 10,
+  marginLeft: 50,
+  y: {grid: true},
+  fy: {label: "", tickRotate: -90},
+  color: {
+    scheme: "oranges",
+    domain: ["Europe", "Oceania", "Africa", "Americas", "Asia"]
+  },
+  title: "The share of income received by the richest 1% of the population in 2023.",
+  subtitle: "Income is measured before payment of taxes and non-pension benefits but after the payment of public and private pensions.",
+  caption: "Data: World Inequality Database (WID). Processed by Our World in Data.",
+})
+```
+
+
+```{css}
+h2 {
+  font-size: large;
+  margin-bottom: -20px;
+  margin-top: 0px;
+}
+h3 {
+  font-size: smaller;
+}
+```
+
