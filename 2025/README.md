@@ -16,7 +16,7 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <img src="viz/day_02.png" width="60%">
 </p> 
 
-## Day 3 (Circular) made with Observable
+## Day 3 (Circular) made with D3
 <p align="center">
 <img src="viz/day_03.png" width="60%">
 </p>
@@ -44,6 +44,11 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 ## Day 8 (Histogram) made with Observable
 <p align="center">
 <img src="viz/day_08.png" width="60%">
+</p> 
+
+## Day 9 (Diverging) made with D3
+<p align="center">
+<img src="viz/day_09.png" width="60%">
 </p> 
 
 ## Day 11 (Stripes) made with Python

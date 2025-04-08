@@ -1,0 +1,144 @@
+---
+execute:
+  eval: true
+  echo: false
+format:
+  html:
+    embed-resources: true
+---
+
+```{r}
+#| warning: false
+#| message: false
+# Data: https://ourworldindata.org/economic-inequality
+income <- readr::read_csv("2025/data/income-share-of-the-richest-1.csv")
+plot_data <- income |>
+  dplyr::rename(Income = `Income share of the richest 1% (before tax) (World Inequality Database)`) |>
+  dplyr::filter(Year %in% c(2022, 2023)) |>
+  dplyr::filter(
+    stringr::str_detect(Country, "(WID)", negate = TRUE),
+    Country != "World"
+  ) |>
+  dplyr::mutate(Country = stringr::str_remove(Country, " \\(country\\)")) |>
+  dplyr::mutate(
+    Continent = countrycode::countrycode(
+      sourcevar = Country,
+      origin = "country.name",
+      destination = "continent"
+    )
+  ) |> 
+  dplyr::filter(Continent == "Europe") |> 
+  dplyr::select(-Continent) |> 
+  tidyr::pivot_wider(
+    names_from = Year,
+    values_from = Income
+  ) |> 
+  dplyr::mutate(Change = `2023` - `2022`)
+ojs_define(plot_data = plot_data)
+```
+
+```{ojs}
+d3 = require("d3@7")
+```
+
+```{ojs}
+r_data = transpose(plot_data)
+```
+
+```{ojs}
+chart = {
+
+  const data = d3.sort(r_data, d => d.Change)
+
+  // Specify the chart’s dimensions.
+  const barHeight = 25;
+  const marginTop = 80;
+  const marginRight = 60;
+  const marginBottom = 35;
+  const marginLeft = 60;
+  const height = Math.ceil((data.length + 0.1) * barHeight) + marginTop + marginBottom;
+
+  // Create the positional scales.
+  const x = d3.scaleLinear()
+    .domain(d3.extent(data, d => d.Change))
+    .rangeRound([marginLeft, width - marginRight]);
+
+  const y = d3.scaleBand()
+    .domain(data.map(d => d.Country))
+    .rangeRound([marginTop, height - marginBottom])
+    .padding(0.1);
+
+  // Create the SVG container.
+  const svg = d3.create("svg")
+      .attr("viewBox", [0, 0, width, height])
+      .attr("style", "max-width: 100%; height: auto; font: 10px sans-serif;");
+
+  // Add a rect for each country.
+  svg.append("g")
+    .selectAll()
+    .data(data)
+    .join("rect")
+      .attr("fill", (d) => d3.schemeRdBu[3][d.Change < 0 ? 2 : 0])
+      .attr("x", (d) => x(Math.min(d.Change, 0)))
+      .attr("y", (d) => y(d.Country))
+      .attr("width", d => Math.abs(x(d.Change) - x(0)))
+      .attr("height", y.bandwidth());
+
+  // Add a text label for each country.
+  svg.append("g")
+      .attr("font-family", "sans-serif")
+      .attr("font-size", 10)
+    .selectAll()
+    .data(data)
+    .join("text")
+      .attr("text-anchor", d => d.Change < 0 ? "end" : "start")
+      .attr("x", (d) => x(d.Change) + Math.sign(d.Change - 0) * 4)
+      .attr("y", (d) => y(d.Country) + y.bandwidth() / 2)
+      .attr("dy", "0.35em")
+      .text(d => d.Change);
+
+  // Add the axes and grid lines.
+  svg.append("g")
+    .attr("transform", `translate(0,${marginTop})`)
+    .call(d3.axisTop(x).ticks(width / 80))
+    .call(g => g.selectAll(".tick line").clone()
+          .attr("y2", height - marginTop - marginBottom)
+          .attr("stroke-opacity", 0.1))
+    .call(g => g.select(".domain").remove());
+
+  svg.append("g")
+    .attr("transform", `translate(${x(0)},0)`)
+    .call(d3.axisLeft(y).tickSize(0).tickPadding(6))
+    .call(g => g.selectAll(".tick text").filter((d, i) => data[i].Change < 0)
+        .attr("text-anchor", "start")
+        .attr("x", 6));
+        
+  // Title
+  svg.append("text")
+    .attr("x", 0)           
+    .attr("y", 15)
+    .attr("text-anchor", "left")  
+    .style("font-size", "16px") 
+    .text("Change in share of income received by the richest 1% of the population.");
+
+  // Subtitle
+  svg.append("text")
+    .attr("x", 0)           
+    .attr("y", 35)
+    .attr("text-anchor", "left")  
+    .style("font-size", "10px") 
+    .text("This chart shows the change between 2022 and 2023. Negative values indicate a more equal distribution of wealth.");
+    
+  // Caption
+  svg.append("text")
+    .attr("x", 0)           
+    .attr("y", height - 5)
+    .attr("text-anchor", "left")  
+    .style("font-size", "10px") 
+    .text("Data: World Inequality Database (WID). Processed by Our World in Data.");
+
+
+  return svg.node();
+}
+```
+
