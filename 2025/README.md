@@ -70,3 +70,8 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <p align="center">
 <img src="viz/day_27.png" width="60%">
 </p> 
+
+## Day 29 (Extraterrestrial) made with R
+<p align="center">
+<img src="viz/day_29.png" width="60%">
+</p> 
