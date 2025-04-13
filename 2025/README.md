@@ -61,6 +61,11 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <img src="viz/day_11.png" width="60%">
 </p> 
 
+## Day 12 (data.gov) made with R
+<p align="center">
+<img src="viz/day_12.png" width="60%">
+</p> 
+
 ## Day 13 (Clusters) made with R
 <p align="center">
 <img src="viz/day_13.png" width="60%">
