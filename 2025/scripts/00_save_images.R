@@ -1,3 +1,17 @@
+
+# Camcorder ---------------------------------------------------------------
+
+library(camcorder)
+gg_record(
+  dir = file.path("2025", "recording"),
+  device = "png",
+  width = 7,
+  height = 5,
+  units = "in",
+  dpi = 300
+)
+
+
 # Function to save a PNG --------------------------------------------------
 
 save_ojs_png <- function(day, ...) {
