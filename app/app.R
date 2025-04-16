@@ -103,7 +103,7 @@ server <- function(input, output) {
 
     } else if (plot_data()$tool %in% c("Observable", "D3")) {
       glue::glue(
-        "https://github.com/nrennie/30DayChartChallenge/tree/main/{plot_data()$year}/scripts/day_{plot_data()$number}/index.qmd"
+        "https://github.com/nrennie/30DayChartChallenge/tree/main/{plot_data()$year}/scripts/day_{plot_data()$number}/"
       )
     } else {
       NA
