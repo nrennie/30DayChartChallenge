@@ -76,6 +76,11 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <img src="viz/day_14.png" width="60%">
 </p> 
 
+## Day 16 (Negative) made with R
+<p align="center">
+<img src="viz/day_16.png" width="60%">
+</p> 
+
 ## Day 17 (Birds) made with R
 <p align="center">
 <img src="viz/day_17.png" width="60%">
