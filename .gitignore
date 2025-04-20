@@ -19,3 +19,5 @@
 *.quarto_ipynb
 /.quarto/
 !2025/scripts/day_18/*
+!2025/scripts/day_19/*
+!2025/scripts/day_21/*
