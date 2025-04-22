@@ -70,6 +70,16 @@ save_js_png("08", vwidth = 1000, vheight = 1000, expand = c(10, 10, 0, 10))
 save_js_png("09", vwidth = 1000, vheight = 1600, expand = c(10, 0, 10, 10))
 
 
+# Day 18 - El Pais (Theme) ------------------------------------------------
+
+save_js_png("18",
+  ojs = FALSE,
+  selector = "svg",
+  vwidth = 1000, vheight = 1600,
+  expand = c(5, 0, 10, 10)
+)
+
+
 # Day 19 - Smooth ---------------------------------------------------------
 
 save_js_png("19",

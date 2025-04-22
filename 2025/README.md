@@ -91,6 +91,11 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <img src="viz/day_17.png" width="60%">
 </p> 
 
+## Day 18 (El Pais Theme) made with D3
+<p align="center">
+<img src="viz/day_18.png" width="60%">
+</p> 
+
 ## Day 19 (Smooth) made with D3
 <p align="center">
 <img src="viz/day_19.png" width="60%">

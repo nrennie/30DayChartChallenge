@@ -18,7 +18,8 @@
 2025/scripts/*/index.html
 *.quarto_ipynb
 /.quarto/
-!2025/scripts/day_18/*
+!2025/scripts/day_18/
+2025/scripts/day_18/data.csv
 !2025/scripts/day_19/
 !2025/scripts/day_19/
 2025/scripts/day_19/data.csv
