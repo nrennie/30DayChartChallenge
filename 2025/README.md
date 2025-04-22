@@ -96,6 +96,11 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <img src="viz/day_20.png" width="60%">
 </p> 
 
+## Day 22 (Stars) made with R
+<p align="center">
+<img src="viz/day_22.png" width="60%">
+</p> 
+
 ## Day 27 (Noise) made with Observable
 <p align="center">
 <img src="viz/day_27.png" width="60%">
