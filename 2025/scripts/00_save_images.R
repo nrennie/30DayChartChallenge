@@ -1,4 +1,3 @@
-
 # Update data -------------------------------------------------------------
 
 source("data/make-data.R")
@@ -19,8 +18,12 @@ gg_record(
 
 # Function to save a PNG --------------------------------------------------
 
-save_ojs_png <- function(day, ...) {
-  quarto::quarto_render(glue::glue("2025/scripts/day_{day}/index.qmd"))
+save_js_png <- function(day,
+                        ojs = TRUE,
+                        selector = ".cell-output.cell-output-display", ...) {
+  if (ojs) {
+    quarto::quarto_render(glue::glue("2025/scripts/day_{day}/index.qmd"))
+  }
   httpuv::runStaticServer(
     dir = glue::glue("2025/scripts/day_{day}/"),
     port = 4000,
@@ -30,7 +33,7 @@ save_ojs_png <- function(day, ...) {
   webshot2::webshot(
     url = "http://127.0.0.1:4000/",
     file = glue::glue("2025/viz/day_{day}.png"),
-    selector = ".cell-output.cell-output-display",
+    selector = selector,
     ...
   )
   httpuv::stopAllServers()
@@ -39,30 +42,39 @@ save_ojs_png <- function(day, ...) {
 
 # Day 1 - Fractions -------------------------------------------------------
 
-save_ojs_png("01")
+save_js_png("01")
 
 
 # Day 2 - Slope -----------------------------------------------------------
 
-save_ojs_png("02", vwidth = 1000, vheight = 1600)
+save_js_png("02", vwidth = 1000, vheight = 1600)
 
 
 # Day 3 - Circular --------------------------------------------------------
 
-save_ojs_png("03", vwidth = 1000, vheight = 1000)
+save_js_png("03", vwidth = 1000, vheight = 1000)
 
 
 # Day 7 - Outliers --------------------------------------------------------
 
-save_ojs_png("07", vwidth = 1000, vheight = 1000)
+save_js_png("07", vwidth = 1000, vheight = 1000)
 
 
 # Day 8 - Histogram -------------------------------------------------------
 
-save_ojs_png("08", vwidth = 1000, vheight = 1000, expand = c(10, 10, 0, 10))
+save_js_png("08", vwidth = 1000, vheight = 1000, expand = c(10, 10, 0, 10))
 
 
 # Day 9 - Diverging -------------------------------------------------------
 
-save_ojs_png("09", vwidth = 1000, vheight = 1600, expand = c(10, 0, 10, 10))
+save_js_png("09", vwidth = 1000, vheight = 1600, expand = c(10, 0, 10, 10))
 
+
+# Day 19 - Smooth ---------------------------------------------------------
+
+save_js_png("19",
+  ojs = FALSE,
+  selector = "svg",
+  vwidth = 1000, vheight = 1600,
+  expand = c(5, 0, 10, 10)
+)
