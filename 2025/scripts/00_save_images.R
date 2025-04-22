@@ -88,3 +88,13 @@ save_js_png("19",
   vwidth = 1000, vheight = 1600,
   expand = c(5, 0, 10, 10)
 )
+
+
+# Day 21 - Fossils --------------------------------------------------------
+
+save_js_png("21",
+  ojs = FALSE,
+  selector = "svg",
+  vwidth = 1000, vheight = 1600,
+  expand = c(5, 0, 10, 10)
+)

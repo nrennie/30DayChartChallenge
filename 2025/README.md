@@ -104,6 +104,11 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 ## Day 20 (Urbanization) made with Python
 <p align="center">
 <img src="viz/day_20.png" width="60%">
+</p>
+
+## Day 21 (Fossils) made with D3
+<p align="center">
+<img src="viz/day_21.png" width="60%">
 </p> 
 
 ## Day 22 (Stars) made with R
