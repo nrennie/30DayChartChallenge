@@ -147,7 +147,7 @@ ggplot(
       colour = alpha(text_col, 0.1),
       linewidth = 0.3
     ),
-    plot.margin = margin(5, 10, 5, 10),
+    plot.margin = margin(5, 20, 5, 10),
     strip.text = element_blank()
   )
 
