@@ -114,6 +114,11 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 ## Day 22 (Stars) made with R
 <p align="center">
 <img src="viz/day_22.png" width="60%">
+</p>
+
+## Day 26 (Monochrome) made with D3
+<p align="center">
+<img src="viz/day_26.png" width="60%">
 </p> 
 
 ## Day 27 (Noise) made with Observable

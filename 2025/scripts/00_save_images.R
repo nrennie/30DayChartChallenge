@@ -98,3 +98,12 @@ save_js_png("21",
   vwidth = 1000, vheight = 1600,
   expand = c(5, 0, 10, 10)
 )
+
+
+# Day 26 - Monochrome -----------------------------------------------------
+
+save_js_png("26",
+  ojs = FALSE,
+  selector = "svg",
+  vwidth = 1000, vheight = 1600
+)
