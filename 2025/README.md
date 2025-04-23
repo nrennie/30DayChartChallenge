@@ -116,6 +116,11 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <img src="viz/day_22.png" width="60%">
 </p>
 
+## Day 23 (Log Scale) made with R
+<p align="center">
+<img src="viz/day_23.png" width="60%">
+</p>
+
 ## Day 26 (Monochrome) made with D3
 <p align="center">
 <img src="viz/day_26.png" width="60%">
