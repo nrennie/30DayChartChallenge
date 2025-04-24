@@ -107,3 +107,13 @@ save_js_png("26",
   selector = "svg",
   vwidth = 1000, vheight = 1600
 )
+
+
+# Day 28 - Inclusion ------------------------------------------------------
+
+save_js_png("28",
+  ojs = FALSE,
+  selector = "svg",
+  vwidth = 1000, vheight = 1600,
+  expand = c(5, 0, 10, 15)
+)

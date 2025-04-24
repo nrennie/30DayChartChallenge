@@ -7,7 +7,7 @@ function wafflePlot(data) {
     const iconSize = 24;
 
     const xScale = d3.scaleLinear()
-        .domain([0.5, 25.5])
+        .domain([0.5, 23.5])
         .range([ 0, width ]);
 
     const yScale = d3.scaleLinear()
@@ -46,7 +46,7 @@ function wafflePlot(data) {
         .attr("text-anchor", "left")
         .attr("y", -40)
         .attr("x", 0 - margin.left)
-        .text("1% of people have 21% of the world's wealth.")
+        .text("1% of people have 21% of the world's income.")
         .style("font-size", "16px")
         .style("font-weight", "bold");
 
