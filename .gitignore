@@ -26,3 +26,6 @@
 2025/scripts/day_21/data.csv
 !2025/scripts/day_26/*
 2025/scripts/day_26/data.csv
+!2025/scripts/day_28/*
+2025/scripts/day_28/data.csv
+2025/scripts/day_28/*.svg
