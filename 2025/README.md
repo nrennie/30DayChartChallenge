@@ -145,3 +145,8 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <p align="center">
 <img src="viz/day_29.png" width="60%">
 </p> 
+
+## Day 30 (National Geographic Theme) made with R
+<p align="center">
+<img src="viz/day_30.png" width="60%">
+</p> 
