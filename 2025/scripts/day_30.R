@@ -93,7 +93,10 @@ ggplot() +
     pattern_spacing = 0.03
   ) +
   labs(title = title, subtitle = st, caption = cap) +
-  PrettyCols::scale_fill_pretty_c(palette = "Greys", na.value = highlight_col) +
+  scale_fill_gradientn(
+    colours = PrettyCols::prettycols("Greys", direction = -1),
+    na.value = highlight_col
+  ) +
   theme_void(base_family = body_font, base_size = 9.5) +
   theme(
     legend.position = "none",
