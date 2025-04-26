@@ -61,7 +61,7 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <img src="viz/day_11.png" width="60%">
 </p> 
 
-## Day 12 (data.gov) made with R
+## Day 12 (data.gov Data) made with R
 <p align="center">
 <img src="viz/day_12.png" width="60%">
 </p> 
@@ -119,6 +119,11 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 ## Day 23 (Log Scale) made with R
 <p align="center">
 <img src="viz/day_23.png" width="60%">
+</p>
+
+## Day 24 (WHO Data) made with D3
+<p align="center">
+<img src="viz/day_24.png" width="60%">
 </p>
 
 ## Day 25 (Risk) made with R

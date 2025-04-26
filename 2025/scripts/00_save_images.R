@@ -100,11 +100,21 @@ save_js_png("21",
 )
 
 
+# Day 24 - WHO Data -------------------------------------------------------
+
+save_js_png("24",
+  ojs = FALSE,
+  selector = "svg",
+  vwidth = 1000, vheight = 1600
+)
+
+
 # Day 26 - Monochrome -----------------------------------------------------
 
 save_js_png("26",
   ojs = FALSE,
   selector = "svg",
+  expand = c(5, 0, 10, 40),
   vwidth = 1000, vheight = 1600
 )
 
