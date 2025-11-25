@@ -11,11 +11,6 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <img src="viz/day_01.png" width="60%">
 </p>
 
-## Day 2 (Neo) made with R
-<p align="center">
-<img src="viz/day_02.png" width="60%">
-</p>
-
 ## Day 3 (Makeover) made with R
 <p align="center">
 <img src="viz/day_03.png" width="60%">
