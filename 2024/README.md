@@ -46,7 +46,7 @@ A repository containing code for the #30DayMapChallenge. Check out the challenge
 <img src="viz/day_09.png" width="60%">
 </p>
 
-## Day 10 (Physical) made with Crochet
+## Day 10 (Physical) made with crochet
 <p align="center">
 <img src="viz/day_10.jpg" width="60%">
 </p>
