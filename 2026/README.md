@@ -10,3 +10,8 @@ A repository containing code for the #30DayChartChallenge. Check out the challen
 <p align="center">
 <img src="viz/day_01.png" width="60%">
 </p> 
+
+## Day 4 (Slope) made with R
+<p align="center">
+<img src="viz/day_04.png" width="60%">
+</p> 
