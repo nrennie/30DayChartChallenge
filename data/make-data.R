@@ -5,7 +5,7 @@ str_extract_between <- function(x, start, end) {
 }
 
 # Params
-years <- c(2022, 2023, 2024, 2025)
+years <- c(2022, 2023, 2024, 2025, 2026)
 
 # Function
 get_readme <- function(year) {
