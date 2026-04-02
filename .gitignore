@@ -17,6 +17,7 @@
 2025/images/
 2025/scripts/*/index.html
 2026/data/
+2026/images/
 *.quarto_ipynb
 /.quarto/
 !2025/scripts/day_18/*
