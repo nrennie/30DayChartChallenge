@@ -25,3 +25,8 @@ A repository containing code for the #30DayChartChallenge. Check out the challen
 <p align="center">
 <img src="viz/day_15.png" width="60%">
 </p> 
+
+## Day 16 (Causation) made with R
+<p align="center">
+<img src="viz/day_16.png" width="60%">
+</p> 
