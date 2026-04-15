@@ -30,3 +30,8 @@ A repository containing code for the #30DayChartChallenge. Check out the challen
 <p align="center">
 <img src="viz/day_16.png" width="60%">
 </p> 
+
+## Day 17 (Remake) made with LibreOffice Calc
+<p align="center">
+<img src="viz/day_17.png" width="60%">
+</p> 
