@@ -35,3 +35,8 @@ A repository containing code for the #30DayChartChallenge. Check out the challen
 <p align="center">
 <img src="viz/day_17.png" width="60%">
 </p> 
+
+## Day 22 (New Tool) made with Datawrapper
+<p align="center">
+<img src="viz/day_22.png" width="60%">
+</p> 
