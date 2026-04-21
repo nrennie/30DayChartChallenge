@@ -20,11 +20,12 @@ emissions <- emissions_raw |>
          Country = Entity) |>
   select(Country, Code, Income, Emissions, Year) |>
   pivot_wider(names_from = Year, values_from = Emissions) |>
-  mutate(Change = `2024` - `2000`, .after = 1) |>
+  mutate(`% change` = 100 * (`2024` - `2000`) / `2000`, .after = 1) |>
   mutate(Code = countrycode(Code, origin = "iso3c", destination = "iso2c"),
          Code = paste0(":", str_to_lower(Code), ":")) |>
   mutate(Country = if_else(is.na(Income), Country, glue("{Country} ^{Income}^"))) |>
-  select(-Income)
+  select(-Income) |>
+  mutate(`CO₂ emissions per capita` = `2024`, .after = 2)
 
 write_csv(emissions, "2026/data/day_22.csv")
 
