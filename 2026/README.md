@@ -40,3 +40,8 @@ A repository containing code for the #30DayChartChallenge. Check out the challen
 <p align="center">
 <img src="viz/day_22.png" width="60%">
 </p> 
+
+## Day 26 (Trend) made with R
+<p align="center">
+<img src="viz/day_26.png" width="60%">
+</p> 
